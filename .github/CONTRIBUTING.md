@@ -2,7 +2,7 @@
 
 Contribuições são **bem vindas** e serão totalmente **creditadas**.
 
-Nós aceitamos contribuições via **Pull Requests** no [Github](https://github.com/bubbstore/bubbstore-api-v2).
+Nós aceitamos contribuições via **Pull Requests** no [Github](https://github.com/webflixtec/webflixtec-api-v2).
 
 ## Pull Requests
 

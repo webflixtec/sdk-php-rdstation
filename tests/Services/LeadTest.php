@@ -1,16 +1,16 @@
 <?php
 
-namespace bubbstore\RDStation\Services;
+namespace webflixtec\RDStation\Services;
 
-use bubbstore\RDStation\TestCase;
-use bubbstore\RDStation\RD;
-use bubbstore\RDStation\Exceptions\RDException;
+use webflixtec\RDStation\TestCase;
+use webflixtec\RDStation\RD;
+use webflixtec\RDStation\Exceptions\RDException;
 
 class LeadTest extends TestCase
 {
 
     /**
-     * @var \bubbstore\RDStation\RD
+     * @var \webflixtec\RDStation\RD
      */
     protected $rd;
 

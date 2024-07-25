@@ -1,10 +1,10 @@
 <?php
 
-namespace bubbstore\RDStation;
+namespace webflixtec\RDStation;
 
-use bubbstore\RDStation\Contracts\LeadInterface;
-use bubbstore\RDStation\Services\Lead;
-use bubbstore\RDStation\Exceptions\RDException;
+use webflixtec\RDStation\Contracts\LeadInterface;
+use webflixtec\RDStation\Services\Lead;
+use webflixtec\RDStation\Exceptions\RDException;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Client as HttpClient;
 
@@ -14,7 +14,7 @@ class RD
     /**
      * Serviço de Lead
      *
-     * @var \bubbstore\RDStation\Contracts\LeadInterface
+     * @var \webflixtec\RDStation\Contracts\LeadInterface
      */
     protected $lead;
 
@@ -44,7 +44,7 @@ class RD
      *
      * Serviço de Lead
      *
-     * @return \bubbstore\RDStation\Services\Lead
+     * @return \webflixtec\RDStation\Services\Lead
      */
     public function lead()
     {

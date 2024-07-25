@@ -1,10 +1,10 @@
 <?php
 
-namespace bubbstore\RDStation\Services;
+namespace webflixtec\RDStation\Services;
 
-use bubbstore\RDStation\Contracts\LeadInterface;
-use bubbstore\RDStation\Exceptions\RDException;
-use bubbstore\RDStation\RD;
+use webflixtec\RDStation\Contracts\LeadInterface;
+use webflixtec\RDStation\Exceptions\RDException;
+use webflixtec\RDStation\RD;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 
@@ -21,7 +21,7 @@ class Lead implements LeadInterface
     /**
      * RD
      *
-     * @var \bubbstore\RDStation\RD
+     * @var \webflixtec\RDStation\RD
      */
     protected $rd;
 
@@ -44,7 +44,7 @@ class Lead implements LeadInterface
      *
      * @var string
      */
-    protected $endpoint = 'https://www.rdstation.com.br/api/1.3/conversions';
+    protected $endpoint = 'https://api.rd.services/platform/contacts';
 
     public function __construct(ClientInterface $http, RD $rd)
     {
@@ -92,6 +92,9 @@ class Lead implements LeadInterface
     {
         try {
             $request = $this->http->post($this->endpoint, [
+                'headers' => [
+                    'Authorization' => 'Bearer ' . $this->rd->getToken(),
+                ],
                 'json' => $this->params
             ]);
             
@@ -113,7 +116,6 @@ class Lead implements LeadInterface
             throw new RDException('O e-mail do lead é obrigatório.');
         }
 
-        $this->params = $value + ['token_rdstation' => $this->rd->getToken()];
         return $this;
     }
 }

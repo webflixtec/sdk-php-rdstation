@@ -1,6 +1,6 @@
 <?php
 
-namespace bubbstore\RDStation\Contracts;
+namespace webflixtec\RDStation\Contracts;
 
 interface LeadInterface
 {

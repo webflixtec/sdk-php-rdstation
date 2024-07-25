@@ -1,16 +1,16 @@
 <?php
 
-namespace bubbstore\RDStation;
+namespace webflixtec\RDStation;
 
 use Mockery;
 use GuzzleHttp\ClientInterface;
-use bubbstore\RDStation\Services\Lead;
-use bubbstore\RDStation\Contracts\LeadInterface;
+use webflixtec\RDStation\Services\Lead;
+use webflixtec\RDStation\Contracts\LeadInterface;
 
 class ClientTest extends TestCase
 {
     /**
-     * @var \bubbstore\RDStation\RD
+     * @var \webflixtec\RDStation\RD
      */
     protected $rd;
 

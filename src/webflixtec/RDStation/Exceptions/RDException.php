@@ -1,6 +1,6 @@
 <?php
 
-namespace bubbstore\RDStation\Exceptions;
+namespace webflixtec\RDStation\Exceptions;
 
 use Exception;
 

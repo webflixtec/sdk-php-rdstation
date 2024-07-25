@@ -7,7 +7,7 @@ Biblioteca que realiza integração com a API do [RDStation](http://www.rdstatio
 ## Instalação via composer
 
 ```bash
-$ composer require bubbstore/rdstation-php-sdk
+$ composer require webflixtec/sdk-php-rdstation
 ```
 
 ## Cadastrar um novo lead
@@ -15,8 +15,8 @@ $ composer require bubbstore/rdstation-php-sdk
 ```php
 <?php
 
-use bubbstore\RDStation\RD;
-use bubbstore\RDStation\Exceptions\RDException;
+use webflixtec\RDStation\RD;
+use webflixtec\RDStation\Exceptions\RDException;
 
 try {
     $rd = new RD('TOKEN_PUBLICO');
@@ -24,7 +24,7 @@ try {
         'email' => 'lucas@bubb.com.br',
         'name' => 'Lucas Colette',
         'cargo' => 'CEO',
-        'empresa' => 'bubbstore',
+        'empresa' => 'webflixtec',
         'tags' => 'a_nice_tag',
         'campo_customizado_1' => 'valor customizado',
         'campo_customizado_2' => 'valor customizado'
@@ -46,7 +46,7 @@ Resultado esperado:
         'email' => 'lucas@bubb.com.br',
         'name' => 'Lucas Colette',
         'cargo' => 'CEO',
-        'empresa' => 'bubbstore',
+        'empresa' => 'webflixtec',
         'tags' => 'a_nice_tag',
         'campo_customizado_1' => 'valor customizado',
         'campo_customizado_2' => 'valor customizado'
@@ -59,15 +59,3 @@ Resultado esperado:
 ```bash
 $ composer test
 ```
-
-## Change log
-
-Consulte [CHANGELOG](.github/CHANGELOG.md) para obter mais informações sobre o que mudou recentemente.
-
-## Contribuindo
-
-Consulte [CONTRIBUTING](.github/CONTRIBUTING.md) para obter mais detalhes.
-
-## Segurança
-
-Se você descobrir quaisquer problemas relacionados à segurança, envie um e-mail para contato@bubbstore.com.br em vez de usar as issues.

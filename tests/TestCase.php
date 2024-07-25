@@ -1,6 +1,6 @@
 <?php
 
-namespace bubbstore\RDStation;
+namespace webflixtec\RDStation;
 
 use Mockery;
 use GuzzleHttp\Client;

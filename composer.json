@@ -1,25 +1,25 @@
 {
-	"name": "bubbstore/rdstation-php-sdk",
-	"type": "library",
-	"description": "Biblioteca PHP de integração com a API do RD Station",
-	"keywords": [
-		"rdstation",
-		"inboud"
-	],
-	"require": {
-		"php": "~5.6|~7.0",
-		"guzzlehttp/guzzle": "~6.0"
-	},
-	"require-dev": {
+    "name": "webflixtec/sdk-php-rdstation",
+    "type": "library",
+    "description": "Biblioteca PHP de integração com a API do RD Station",
+    "keywords": [
+        "rdstation",
+        "inboud"
+    ],
+    "require": {
+        "php": "^8.1",
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "require-dev": {
         "codeclimate/php-test-reporter": "~0.3",
         "mockery/mockery": "~0.9",
         "phpunit/phpunit": "~5.0",
         "squizlabs/php_codesniffer": "~2.3",
         "larapack/dd": "^1.1"
-	},
-	"autoload-dev": {
+    },
+    "autoload-dev": {
         "psr-4": {
-            "bubbstore\\RDStation\\": "tests"
+            "webflixtec\\RDStation\\": "tests"
         }
     },
     "scripts": {
@@ -27,17 +27,20 @@
         "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src",
         "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src"
     },
-	"autoload": {
-		"psr-0": {
-			"bubbstore": "src/"
-		}
-	},
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "Lucas Colette",
-			"email": "lucas@bubb.com.b"
-		}
-	],
-	"minimum-stability": "stable"
+    "autoload": {
+        "psr-0": {
+            "webflixtec": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lucas Colette",
+            "email": "lucas@bubb.com.br"
+        },{
+            "name": "Weslley Ceresa",
+            "email": "webflix.tecnologia@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
 }
