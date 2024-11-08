@@ -2,13 +2,13 @@
 
 namespace RdStation\Crm;
 
-class DealPipelines extends \RdStation\Core\RdStationCrm{
+class Contacts extends \RdStation\Core\RdStationCrm{
     
     public function list(array $query = []){
         $query['token'] = $this->getToken();
         
         try{
-            $response = $this->http->get('deal_pipelines', [
+            $response = $this->http->get('contacts', [
                 "query" => $query,
             ]);
 
@@ -33,12 +33,13 @@ class DealPipelines extends \RdStation\Core\RdStationCrm{
         }
     }
     
-    public function details($id){
-        $query['token'] = $this->getToken();
-        
+    public function create(array $body){        
         try{
-            $response = $this->http->get(sprintf('deal_pipelines/%s', $id), [
-                "query" => $query,
+            $response = $this->http->post('contacts', [
+                "query" => [
+                    'token' => $this->getToken(),
+                ],
+                'json' => $body,
             ]);
 
             $body = (string)$response->getBody();
@@ -61,5 +62,4 @@ class DealPipelines extends \RdStation\Core\RdStationCrm{
             throw new \RdStation\Exceptions\RdStationException($ex);
         }
     }
-    
 }

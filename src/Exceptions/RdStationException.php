@@ -1,6 +1,6 @@
 <?php
 
-namespace Ligatech\Exceptions;
+namespace RdStation\Exceptions;
 
 use Exception;
 use GuzzleHttp\Exception\BadResponseException;
