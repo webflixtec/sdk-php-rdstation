@@ -28,6 +28,10 @@ class DealSources extends \RdStation\Core\RdStationCrm{
             
             throw \RdStation\Exceptions\RdStationException::fromGuzzleException($ex);
             
+        } catch (\GuzzleHttp\Exception\RequestException $ex) {
+            
+            throw \RdStation\Exceptions\RdStationException::fromGuzzleException($ex);
+            
         } catch (\Exception $ex) {
             throw new \RdStation\Exceptions\RdStationException($ex);
         }

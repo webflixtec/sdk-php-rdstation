@@ -6,6 +6,7 @@ use Exception;
 use GuzzleHttp\Exception\BadResponseException;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\ServerException;
+use GuzzleHttp\Exception\RequestException;
 
 class RdStationException extends Exception{
     
@@ -35,7 +36,7 @@ class RdStationException extends Exception{
         
     }
     
-    public static function fromGuzzleException(ServerException|ClientException|BadResponseException $ex){
+    public static function fromGuzzleException(ServerException|ClientException|BadResponseException|RequestException $ex){
         $responseBody = '['.$ex::class.'] Body: ' . (string)$ex->getResponse()->getBody();
         return new RdStationException( new \Exception($responseBody, $ex->getCode(), $ex->getPrevious()) );
     }

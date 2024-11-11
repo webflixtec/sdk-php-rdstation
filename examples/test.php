@@ -38,7 +38,7 @@ try{
 
     var_dump($data);
     
-} catch (\Ligatech\Exceptions\RdStationException $ex) {
+} catch (\RdStation\Exceptions\RdStationException $ex) {
 
     var_dump($ex);
     

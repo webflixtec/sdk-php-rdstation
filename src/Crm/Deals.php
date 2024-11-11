@@ -28,6 +28,10 @@ class Deals extends \RdStation\Core\RdStationCrm{
             
             throw \RdStation\Exceptions\RdStationException::fromGuzzleException($ex);
             
+        } catch (\GuzzleHttp\Exception\RequestException $ex) {
+            
+            throw \RdStation\Exceptions\RdStationException::fromGuzzleException($ex);
+            
         } catch (\Exception $ex) {
             throw new \RdStation\Exceptions\RdStationException($ex);
         }
@@ -58,6 +62,10 @@ class Deals extends \RdStation\Core\RdStationCrm{
             
             throw \RdStation\Exceptions\RdStationException::fromGuzzleException($ex);
             
+        } catch (\GuzzleHttp\Exception\RequestException $ex) {
+            
+            throw \RdStation\Exceptions\RdStationException::fromGuzzleException($ex);
+            
         } catch (\Exception $ex) {
             throw new \RdStation\Exceptions\RdStationException($ex);
         }
@@ -85,6 +93,10 @@ class Deals extends \RdStation\Core\RdStationCrm{
             throw \RdStation\Exceptions\RdStationException::fromGuzzleException($ex);
             
         } catch (\GuzzleHttp\Exception\BadResponseException $ex) {
+            
+            throw \RdStation\Exceptions\RdStationException::fromGuzzleException($ex);
+            
+        } catch (\GuzzleHttp\Exception\RequestException $ex) {
             
             throw \RdStation\Exceptions\RdStationException::fromGuzzleException($ex);
             
