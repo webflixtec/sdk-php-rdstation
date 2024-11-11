@@ -73,7 +73,7 @@ class Deals extends \RdStation\Core\RdStationCrm{
     
     public function update($id, array $body){
         try{
-            $response = $this->http->get(sprintf('deals/%s', $id), [
+            $response = $this->http->put(sprintf('deals/%s', $id), [
                 "query" => [
                     'token' => $this->getToken(),
                 ],
