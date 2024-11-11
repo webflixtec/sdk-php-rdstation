@@ -105,4 +105,37 @@ class Deals extends \RdStation\Core\RdStationCrm{
         }
     }
     
+    public function createProduct($id, array $body){
+        try{
+            $response = $this->http->post(sprintf('deals/%s/deal_products', $id), [
+                "query" => [
+                    'token' => $this->getToken(),
+                ],
+                'json' => $body,
+            ]);
+
+            $body = (string)$response->getBody();
+                        
+            return json_decode($body);
+            
+        } catch (\GuzzleHttp\Exception\ServerException $ex) {
+            
+            throw \RdStation\Exceptions\RdStationException::fromGuzzleException($ex);
+                        
+        } catch (\GuzzleHttp\Exception\ClientException $ex) {
+            
+            throw \RdStation\Exceptions\RdStationException::fromGuzzleException($ex);
+            
+        } catch (\GuzzleHttp\Exception\BadResponseException $ex) {
+            
+            throw \RdStation\Exceptions\RdStationException::fromGuzzleException($ex);
+            
+        } catch (\GuzzleHttp\Exception\RequestException $ex) {
+            
+            throw \RdStation\Exceptions\RdStationException::fromGuzzleException($ex);
+            
+        } catch (\Exception $ex) {
+            throw new \RdStation\Exceptions\RdStationException($ex);
+        }
+    }
 }
