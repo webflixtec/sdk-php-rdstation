@@ -37,7 +37,7 @@ class RdStationException extends Exception{
     
     public static function fromGuzzleException(ServerException|ClientException|BadResponseException $ex){
         $responseBody = '['.$ex::class.'] Body: ' . (string)$ex->getResponse()->getBody();
-        return new RdStationException( new Exception($responseBody, $ex->getCode(), $ex->getPrevious()) );
+        return new RdStationException( new \Exception($responseBody, $ex->getCode(), $ex->getPrevious()) );
     }
     
 }

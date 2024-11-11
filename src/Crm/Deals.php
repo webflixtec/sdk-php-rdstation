@@ -16,24 +16,24 @@ class Deals extends \RdStation\Core\RdStationCrm{
                         
             return json_decode($body);
             
-        } catch (ServerException $ex) {
+        } catch (\GuzzleHttp\Exception\ServerException $ex) {
             
             throw \RdStation\Exceptions\RdStationException::fromGuzzleException($ex);
                         
-        } catch (ClientException $ex) {
+        } catch (\GuzzleHttp\Exception\ClientException $ex) {
             
             throw \RdStation\Exceptions\RdStationException::fromGuzzleException($ex);
             
-        } catch (BadResponseException $ex) {
+        } catch (\GuzzleHttp\Exception\BadResponseException $ex) {
             
             throw \RdStation\Exceptions\RdStationException::fromGuzzleException($ex);
             
-        } catch (Exception $ex) {
+        } catch (\Exception $ex) {
             throw new \RdStation\Exceptions\RdStationException($ex);
         }
     }
     
-    public function create(array $body){        
+    public function create(array $body){
         try{
             $response = $this->http->post('deals', [
                 "query" => [
@@ -46,19 +46,19 @@ class Deals extends \RdStation\Core\RdStationCrm{
                         
             return json_decode($body);
             
-        } catch (ServerException $ex) {
+        } catch (\GuzzleHttp\Exception\ServerException $ex) {
             
             throw \RdStation\Exceptions\RdStationException::fromGuzzleException($ex);
                         
-        } catch (ClientException $ex) {
+        } catch (\GuzzleHttp\Exception\ClientException $ex) {
             
             throw \RdStation\Exceptions\RdStationException::fromGuzzleException($ex);
             
-        } catch (BadResponseException $ex) {
+        } catch (\GuzzleHttp\Exception\BadResponseException $ex) {
             
             throw \RdStation\Exceptions\RdStationException::fromGuzzleException($ex);
             
-        } catch (Exception $ex) {
+        } catch (\Exception $ex) {
             throw new \RdStation\Exceptions\RdStationException($ex);
         }
     }
@@ -76,19 +76,19 @@ class Deals extends \RdStation\Core\RdStationCrm{
                         
             return json_decode($body);
             
-        } catch (ServerException $ex) {
+        } catch (\GuzzleHttp\Exception\ServerException $ex) {
             
             throw \RdStation\Exceptions\RdStationException::fromGuzzleException($ex);
                         
-        } catch (ClientException $ex) {
+        } catch (\GuzzleHttp\Exception\ClientException $ex) {
             
             throw \RdStation\Exceptions\RdStationException::fromGuzzleException($ex);
             
-        } catch (BadResponseException $ex) {
+        } catch (\GuzzleHttp\Exception\BadResponseException $ex) {
             
             throw \RdStation\Exceptions\RdStationException::fromGuzzleException($ex);
             
-        } catch (Exception $ex) {
+        } catch (\Exception $ex) {
             throw new \RdStation\Exceptions\RdStationException($ex);
         }
     }
